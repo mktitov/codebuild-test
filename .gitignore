@@ -1,0 +1,10 @@
+*.ipr
+*.iml
+*.iws
+target
+.c9
+.idea
+.DS_Store
+.serverless
+package-lock.json
+dependency-reduced-pom.xml
