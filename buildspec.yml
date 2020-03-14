@@ -17,3 +17,8 @@ phases:
 artifacts:
   files:
     - target/codebuild-test-1.0.jar
+reports:
+  report-group1: #surefire junit reports
+    files:
+      - '**/*'
+    base-directory: 'target/surefire-reports'
