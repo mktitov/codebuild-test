@@ -8,15 +8,19 @@ phases:
     commands:
       - echo Nothing to do in the pre_build phase...
   build:
+    env:
+      - AWS_ACCESS_KEY_ID: MavenReadWriteKeyId
+      - AWS_SECRET_ACCESS_KEY: MavenReadWriteKeySecret
     commands:
       - echo Build started on `date`
-      - mvn install
+      - mvn deploy
+#      - mvn install
   post_build:
     commands:
       - echo Build completed on `date`
-artifacts:
-  files:
-    - target/codebuild-test-1.0.jar
+#artifacts:
+#  files:
+#    - target/codebuild-test-1.0.jar
 reports:
   report-group1: #surefire junit reports
     files:
