@@ -2,8 +2,8 @@ version: 0.2
 
 env:
   parameter-store:
-    - AWS_ACCESS_KEY_ID: MavenReadWriteKeyId
-    - AWS_SECRET_ACCESS_KEY: MavenReadWriteKeySecret
+    AWS_ACCESS_KEY_ID: MavenReadWriteKeyId
+    AWS_SECRET_ACCESS_KEY: MavenReadWriteKeySecret
 
 phases:
   install:
