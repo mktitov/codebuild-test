@@ -1,5 +1,10 @@
 version: 0.2
 
+env:
+  parameter-store:
+    - AWS_ACCESS_KEY_ID: MavenReadWriteKeyId
+    - AWS_SECRET_ACCESS_KEY: MavenReadWriteKeySecret
+
 phases:
   install:
     runtime-versions:
@@ -8,9 +13,6 @@ phases:
     commands:
       - echo Nothing to do in the pre_build phase...
   build:
-    env:
-      - AWS_ACCESS_KEY_ID: MavenReadWriteKeyId
-      - AWS_SECRET_ACCESS_KEY: MavenReadWriteKeySecret
     commands:
       - echo Build started on `date`
       - mvn deploy
